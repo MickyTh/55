@@ -1,3 +1,4 @@
+import ctypes
 user32 = ctypes.windll.user32
 kernel32 = ctypes.windll.kernel32
 psapi = ctypes.windll.psapi
