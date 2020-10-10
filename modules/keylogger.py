@@ -1,5 +1,11 @@
 import ctypes
+import pythoncom
+import pyHook
+import win32clipboard
 import threading
+import time
+import random
+
 user32 = ctypes.windll.user32
 kernel32 = ctypes.windll.kernel32
 psapi = ctypes.windll.psapi
