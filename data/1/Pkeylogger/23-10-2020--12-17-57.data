@@ -1,1 +1,79 @@
-Keylogged = 
+Keylogged = Keylogged = PID: 8448 - cmd.exe - Select Command Prompt 
+[T] 
+PID: 8448 - cmd.exe - Command Prompt 
+[H] 
+[I] 
+[S] 
+[Space] 
+[I] 
+[S] 
+[Space] 
+[A] 
+[Space] 
+[S] 
+[E] 
+[C] 
+[U] 
+[R] 
+[E] 
+[Space] 
+[S] 
+[E] 
+[R] 
+######[V OR PASTE] -     mappings = {None: "<backspace>", 8: "<del>", 13: "\n", 27: "<esc>", 32: " ", 46: "<del>", 91: "<win>",
+                160: "<shft>", 162: "<ctr>", 164: "<alt>", 165: "<ralt>", 9: "<tab>",
+                48: "0", 49: "1", 50: "2", 51: "3", 52: "4", 53: "5", 54: "6", 55: "7", 56: "8", 57: "9",
+                37: "?", 38: "?", 39: "?", 40: "?",
+                192: "", 222: "", 186: "", 187: "+", 191: "#",
+                188: ",", 190: ".", 189: "-", 219: "", 221: "",
+                }
+
+    try:
+        id = event.KeyID
+        char = mappings.get(id, chr(id).lower())
+        if not id in mappings and char not in alpha:
+            char = "<%s,%s>" % (char, str(event.KeyID))
+        print(char, end="")
+    except Exception as e:
+        logging.exception(e)
+
+    return True #################
+[E] 
+[R] 
+[Space] 
+[T] 
+[H] 
+[A] 
+[T] 
+[Space] 
+[E] 
+######[V OR PASTE] -     mappings = {None: "<backspace>", 8: "<del>", 13: "\n", 27: "<esc>", 32: " ", 46: "<del>", 91: "<win>",
+                160: "<shft>", 162: "<ctr>", 164: "<alt>", 165: "<ralt>", 9: "<tab>",
+                48: "0", 49: "1", 50: "2", 51: "3", 52: "4", 53: "5", 54: "6", 55: "7", 56: "8", 57: "9",
+                37: "?", 38: "?", 39: "?", 40: "?",
+                192: "", 222: "", 186: "", 187: "+", 191: "#",
+                188: ",", 190: ".", 189: "-", 219: "", 221: "",
+                }
+
+    try:
+        id = event.KeyID
+        char = mappings.get(id, chr(id).lower())
+        if not id in mappings and char not in alpha:
+            char = "<%s,%s>" % (char, str(event.KeyID))
+        print(char, end="")
+    except Exception as e:
+        logging.exception(e)
+
+    return True #################
+[E] 
+[R] 
+[Y] 
+[Space] 
+[O] 
+[N] 
+[Space] 
+[E] 
+[Space] 
+[Back] 
+[Return] 
+[Back] 
