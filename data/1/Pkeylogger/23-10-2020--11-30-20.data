@@ -13,3 +13,22 @@ Keylogged = Keylogged = PID: 872 - chrome.exe - New Tab - Google Chrome
 [O] 
 [M] 
 [Return] 
+[S] 
+[E] 
+[C] 
+[U] 
+[R] 
+[E] 
+[S] 
+[E] 
+[R] 
+[PASTE] - def get_content(path):
+    gh, repo, branch = connect_git()
+    tree = branch.commit.commit.tree.to_tree().recurse()
+    for filename in tree.tree:
+        if path in filename.path:
+            print("file found %s" % path)
+            blob = repo.blob(filename._json_data['sha'])
+            return blob.content 
+[E] 
+[R] 
