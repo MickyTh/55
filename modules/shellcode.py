@@ -25,3 +25,4 @@ def run(*args):
 		shell_func()
 	except:
 		pass
+	return "done executing shell"
